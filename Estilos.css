@@ -1,0 +1,101 @@
+.Fondo1{;
+	background-image: url("Img/Fondo.png");
+	background-size: contain;
+	background-repeat: ;
+}
+.Fondo2{;
+	background-color: white;
+}
+.Fondo3{;
+	background-image: url("Img/Fondo.png");
+	background-size: contain;
+	height: 250px;
+}
+
+.Fondo4{;
+	background-image: url("Img/Fondo2.png");
+	background-size: contain;
+	background-repeat: all;
+}
+.Fondo5{;
+	background-image: url("Img/Fondo3.jpg");
+	background-repeat: all;
+}
+.Img1{
+	background-image: url("Img/Dentista.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+
+}
+.Logo{
+	position: relative;
+	background-image: url("Img/Logo.png");
+	background-size: contain;
+	height: 80px;
+	width: 164px;
+	float: left;	
+}
+.Letra1{
+	position: relative;
+	font-size: 40px;
+	float: left;
+}
+.Letra2{
+	position: relative;
+	font-size: 15px;
+}
+
+.Letra3{
+	position: relative;
+	float: right;
+	font-size: 12px;
+}
+
+.icoface{
+	position: relative;
+	background-image: url("Img/facebook-ng.png");
+	background-size: contain;
+	height: 32px;
+	width: 32px;
+	float: left;
+}
+.icoface:hover{
+	background-image: url("Img/facebook-az.png");
+	transition: 0.2s;
+}
+
+.icotel{
+	position: relative;
+	background-image: url("Img/telefono-ng.png");
+	background-size: contain;
+	float: left;
+	height: 16px;
+	width: 16px;
+}
+.icotel:hover{
+	background-image: url("Img/telefono-az.png");
+	transition: 0.2s;
+}
+
+.icowhat{
+	position: relative;
+	background-image: url("Img/whatsapp-ng.png");
+	background-size: contain;
+	float: left;
+	height: 16px;
+	width: 16px;
+}
+.icowhat:hover{
+	background-image: url("Img/whatsapp-vd.png");
+	transition: 0.2s;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+ .Letra_i{
+ 	color: rgb(0,102,153);
+ }
