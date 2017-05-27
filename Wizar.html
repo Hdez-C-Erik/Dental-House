@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="Estilos.css">
+
+	<title>Dental House</title>
+
+</head>
+<body onload="cargarcontenidoPestania2('op1')">
+		<div class="container-fluid"><br>
+				
+			<ul class="nav nav-pills col-xs-12">
+				<li id="elemento2_1">
+					<a href="#" onclick="cargarcontenidoPestania2('op1')">Atenci&oacute;n Medica</a>
+				</li>
+				<li id="elemento2_2">
+					<a href="#">Receta</a>
+				</li>
+				<li id="elemento2_3">
+					<a href="#">Vista Previa</a>
+				</li>
+			</ul>
+			<br>
+			<br>
+			<br>
+			<div id="contenidoPestania2"></div>
+			<br>
+			<br>
+			<br>
+		</div>
+		
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	document.getElementById("elemento2_1").click();
+
+	function cargarcontenidoPestania2(sel)
+	{
+		if (sel=="op1")
+		{
+			$('#contenidoPestania2').load("Reg_Atencion_Medica.php")
+			$('#elemento2_1').addClass("active")
+	 	}
+
+		if (sel=="op2")
+		{
+			$('#contenidoPestania2').load("Reg_Receta.php")
+			$('#elemento2_2').addClass("active")
+			$('#elemento2_1').removeClass("active").css('visibility','hidden')
+		}
+
+		if (sel=="op3")
+		{
+			$('#contenidoPestania2').load("Vista_Previa.php")
+			$('#elemento2_3').addClass("active")
+			$('#elemento2_2').removeClass("active").css('visibility','hidden')
+		}
+	}
+	</script>
+
+</body>
+
+
+</html>

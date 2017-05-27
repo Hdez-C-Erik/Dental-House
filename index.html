@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="Estilos.css">
+
+	<title>Dental House</title>
+</head>
+
+<body onload="cargarContenidoPestania('op1')">
+	<div>
+		<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+		<div class="navbar-toggler animate">
+			<span class="menu-icon"></span>
+		</div>
+		<ul class="navbar-menu animate">
+			<li id="modal_1">
+				<a href="#" class="animate" onclick="AbrirModal('aMd1')">
+					<span class="desc animate"> Doctor </span>
+					<span class="glyphicon glyphicon-user"></span>
+				</a>
+			</li id="modal_2">
+			<li>
+				<a href="#" class="animate" onclick="AbrirModal('aMd2')">
+					<span class="desc animate"> Antecedentes </span>
+					<span class="glyphicon glyphicon-info-sign"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="animate" onclick="AbrirModal('aMd3')">
+					<span class="desc animate"> Atencion Medica </span>
+					<span class="glyphicon glyphicon-comment"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="animate" onclick="AbrirModal('aMd4')">
+					<span class="desc animate"> Expediente </span>
+					<span class="glyphicon glyphicon-list-alt"></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	</div>
+	<div class="container-fluid Fondo1">
+		<div class="container Fondo2"><br>
+			<div class="row col-xs-12">
+				<div class="Logo"></div>
+				<div class="Letra1 col-xs-6">Dentista<div class="Letra2">Servicios Especializados Odontol&oacute;gicos<br><br><br></div></div>
+				<dir class="modal-body">
+				<div class="modal fade" id="modal" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+					<div class="modal-dialog">
+						<div>
+							<div id="contenido-modal" class="modal-content container-fluid marco"></div>
+						</div>
+					</div>
+				</div>
+			</dir>
+			</div>
+				
+			<ul class="nav nav-pills col-xs-12">
+				<li id="elemento1">
+					<a href="#" onclick="cargarContenidoPestania('op1')">Inicio</a>
+				</li>
+				<li id="elemento2">
+					<a href="#" onclick="cargarContenidoPestania('op2')">Acerca de...</a>
+				</li>
+				<li id="elemento3">
+					<a href="#" onclick="cargarContenidoPestania('op3')">Servicios</a>
+				</li>
+				<li id="elemento4">
+					<a href="#" onclick="cargarContenidoPestania('op4')">Solicitar Cita</a>
+				</li>
+			</ul>
+			<br><br>
+			<div id="contenidoPestania"></div>			
+
+		</div>
+		<div class="panel-footer">
+			<div class="row">
+				<div class="Letra3 col-xs-12">
+					<div class="col-xs-3 col-md-1 col-lg-1">
+						<a href="https://www.facebook.com/ortofabo" target="_blank"><div class="icoface"></div></a>
+					</div>
+					<div class="icowhat col-xs-2 col-md-1"></div>
+					<div class="col-xs-10 col-md-6 col-lg-2">(044) 462-172-33-99</div>
+					<br>
+					<div class="col-xs-10 col-md-6 col-lg-2">(044) 462-165-89-87</div>
+					
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+	function cargarContenidoPestania(sel)
+	{
+		if (sel=="op1")
+		{
+			$('#contenidoPestania').load("Inicio.html")
+			$('#elemento1').addClass("active")
+			$('#elemento2').removeClass("active")
+			$('#elemento3').removeClass("active")
+			$('#elemento4').removeClass("active")
+	 	}
+
+		if (sel=="op2")
+		{
+			$('#contenidoPestania').load("Acerca_de.html")
+			$('#elemento2').addClass("active")
+			$('#elemento1').removeClass("active")
+			$('#elemento3').removeClass("active")
+			$('#elemento4').removeClass("active")
+		}
+
+		if (sel=="op3")
+		{
+			$('#contenidoPestania').load("Servicios.html")
+			$('#elemento3').addClass("active")
+			$('#elemento1').removeClass("active")
+			$('#elemento2').removeClass("active")
+			$('#elemento4').removeClass("active")
+		}
+
+		if (sel=="op4")
+		{
+			$('#contenidoPestania').load("Reg_Cita.php")
+			$('#elemento4').addClass("active")
+			$('#elemento1').removeClass("active")
+			$('#elemento2').removeClass("active")
+			$('#elemento3').removeClass("active")
+		}
+	}
+	$(function () {
+    /* START OF DEMO JS - NOT NEEDED */
+    if (window.location == window.parent.location) {
+        $('#fullscreen').html('<span class="glyphicon glyphicon-resize-small"></span>');
+        $('#fullscreen').attr('href', 'http://bootsnipp.com/mouse0270/snippets/PbDb5');
+        $('#fullscreen').attr('title', 'Back To Bootsnipp');
+    }    
+    $('#fullscreen').on('click', function(event) {
+        event.preventDefault();
+        window.parent.location =  $('#fullscreen').attr('href');
+    });
+    $('#fullscreen').tooltip();
+    /* END DEMO OF JS */
+    
+    $('.navbar-toggler').on('click', function(event) {
+		event.preventDefault();
+		$(this).closest('.navbar-minimal').toggleClass('open');
+	})
+	});
+
+	function AbrirModal(aMd){
+		if (aMd=="aMd1"){
+			$("#modal").modal("show");
+  			$("#contenido-modal").load("Reg_Doctor.php")
+		}
+  		if (aMd=="aMd2"){
+			$("#modal").modal("show");
+  			$("#contenido-modal").load("Reg_Antecedente.php")
+		}
+		if (aMd=="aMd3"){
+			$("#modal").modal("show");
+  			$("#contenido-modal").load("Wizar.html")
+		}
+		if (aMd=="aMd4"){
+			$("#modal").modal("show");
+  			$("#contenido-modal").load("Reg_Expediente.php")
+		}
+  	}
+  	</script>
+	</body>
+</html>
